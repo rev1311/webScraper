@@ -8,6 +8,11 @@
     "cheerio": "^1.0.0-rc.10",
     "express": "^4.17.1"
   },
+
+  "env": {
+    "browser": true
+  },
+
   "devDependencies": {},
   "scripts": {
     "start": "nodemon index.js"
