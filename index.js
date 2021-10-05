@@ -11,19 +11,16 @@ const url = 'https://m.theepochtimes.com/';
 axios(url)
     .then(response => {
         const html = response.data;
-        console.log(html)
         const $ = cheerio.load(html);
         const articles = [];
 
-        $('.focusheadlines', html).each(()=> {
-            const title = $(this).text();
-            const image = $(this).attr('.image');
+        $('.left_part', html).each(function() {
+            const title = $(this).text().slice(0, -16);
             const url = $(this).find('a').attr('href');
             articles.push({
                 title,
-                image,
                 url
             });
             console.log(articles)
-        }).catch(err => console.log(err));
+        });
     });
