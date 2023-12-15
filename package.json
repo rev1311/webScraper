@@ -6,14 +6,12 @@
   "dependencies": {
     "axios": "^0.22.0",
     "cheerio": "^1.0.0-rc.10",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "node-fetch": "^3.3.2"
   },
-
   "env": {
     "browser": true
   },
-
-  "devDependencies": {},
   "scripts": {
     "start": "nodemon index.js"
   },
