@@ -1,18 +1,27 @@
-import fetch from 'node-fetch';
+const apiUrl = 'https://jsonplaceholder.typicode.com/posts/1';
 
-const apiUrl = 'https://api.example.com/data';
+// fetch(apiUrl)
+//   .then(response => {
+//     if (!response.ok) {
+//       throw new Error(`HTTP error! Status: ${response.status}`);
+//     }
+//     return response.json();
+//   })
+//   .then(data => {
+//     // Handle the JSON data
+//     console.log(data);
+//   })
+//   .catch(error => {
+//     console.error('Fetch error:', error);
+//   });
+window.onload = () => {
+    console.log('refreshed')
+    
+    fetch(apiUrl)
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+    
+    
+}
 
-fetch(apiUrl)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    return response.json();
-  })
-  .then(data => {
-    // Handle the JSON data
-    console.log(data);
-  })
-  .catch(error => {
-    console.error('Fetch error:', error);
-  });
+console.log('wtf')
